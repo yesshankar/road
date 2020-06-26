@@ -1,0 +1,155 @@
+body {
+  /* background: linear-gradient(deepskyblue, skyblue 30%); */
+  background-image: url("images/clouds.png");
+  background-size: 100% calc(100vh - 300px);
+  background-repeat: no-repeat;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.trees {
+  width: 100%;
+  position: fixed;
+  bottom: 240px;
+  left: 0px;
+}
+
+.trees img {
+  width: 100%;
+}
+
+.road {
+  position: fixed;
+  height: 300px;
+  width: 150vw;
+  /* width: 150%; */
+  background: linear-gradient(#38454b, #1d262b, #38454b);
+  left: -250px;
+  bottom: 0px;
+  transform-style: preserve-3d;
+  transform: perspective(368px) rotateX(41deg); /*translateX(-305px);*/
+}
+
+.clouds {
+  position: relative;
+}
+
+.clouds > div {
+  position: absolute;
+  /* border: 1px dotted blue; */
+}
+
+.cloud1 {
+  top: 50px;
+  right: 0%;
+  animation: move-cloud1 65s linear infinite;
+}
+
+.cloud2 {
+  top: 50px;
+  right: 25%;
+  animation: move-cloud2 65s linear infinite;
+}
+
+.cloud3 {
+  top: -75px;
+  right: 50%;
+  animation: move-cloud3 65s linear infinite;
+}
+
+.cloud4 {
+  top: 10px;
+  right: 75%;
+  animation: move-cloud4 65s linear infinite;
+}
+
+@keyframes move-cloud1 {
+  0% {
+    right: 0%;
+  }
+
+  100% {
+    right: 100%;
+  }
+}
+@keyframes move-cloud2 {
+  0% {
+    right: 25%;
+  }
+
+  75% {
+    right: 75%;
+  }
+
+  75.01% {
+    right: 0%;
+  }
+
+  100% {
+    right: 25%;
+  }
+}
+@keyframes move-cloud3 {
+  0% {
+    right: 50%;
+  }
+
+  50% {
+    right: 100%;
+  }
+
+  50.01% {
+    right: 0%;
+  }
+
+  100% {
+    right: 50%;
+  }
+}
+@keyframes move-cloud4 {
+  0% {
+    right: 75%;
+  }
+
+  25% {
+    right: 100%;
+  }
+
+  25.01% {
+    right: 0%;
+  }
+
+  100% {
+    right: 75%;
+  }
+}
+
+.up-road,
+.yellow-divider,
+.down-road {
+  position: absolute;
+  width: 100%;
+}
+
+.yellow-divider {
+  height: 15px;
+  top: 140px;
+  border-top: 5px solid orange;
+  border-bottom: 5px solid orange;
+}
+
+.up-road {
+  border-top: 5px solid white;
+  border-bottom: 5px dashed white;
+  height: 70px;
+  top: 10px;
+}
+
+.down-road {
+  border-bottom: 5px solid white;
+  border-top: 5px dashed white;
+  height: 70px;
+  bottom: 10px;
+}
